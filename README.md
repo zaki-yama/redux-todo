@@ -58,3 +58,10 @@ function todoApp(state, action) {
 state 内の各項目に依存関係がないとき、reducer を項目ごとに分割することができる。
 これを **reducer composition** と呼ぶ。
 
+### データフロー
+
+1. `createStore(reducer)` で `store` を生成する
+2. `store.dispatch(action)` を呼ぶ (実際には `action` は Action Creator の戻り値)
+3. `reducer` の関数が実行され、state が更新される
+4. `store` は `reducer` の戻り値である新しい state のツリーを保存する
+5. `store.subscribe(listener)` した listener が実行される
