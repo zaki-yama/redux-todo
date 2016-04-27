@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --progress --colors --watch",
-	"start": "webpack-dev-server",
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -23,6 +23,12 @@
     "webpack": "^1.12.14"
   },
   "devDependencies": {
+    "babel-eslint": "^6.0.4",
+    "eslint": "^2.8.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-import": "^1.6.0",
+    "eslint-plugin-jsx-a11y": "^1.0.3",
+    "eslint-plugin-react": "^5.0.1",
     "redux-devtools": "^3.1.1",
     "webpack-dev-server": "^1.14.1"
   }
