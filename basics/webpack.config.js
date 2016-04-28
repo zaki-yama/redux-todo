@@ -1,7 +1,12 @@
 const webpack = require('webpack');
 
 module.exports = {
-  entry: __dirname + "/index.js",
+  context: __dirname,
+  entry: {
+    javascript: './index.js',
+    html: './index.html'
+  },
+
   output: {
     path: __dirname + '/dist',
     filename: 'bundle.js'
@@ -26,10 +31,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
+        loader: 'babel-loader',
         query:{
           presets: ['react', 'es2015']
         }
+      },
+      {
+        test: /\.html$/,
+        loader: 'file?name=[path][name].[ext]'
       }
     ]
   }
