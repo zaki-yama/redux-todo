@@ -22,3 +22,9 @@ export const toggleTodo = (id) => {
   };
 }
 
+
+export const incrementCounter = (count) => {
+  return {
+    type: 'INCREMENT_COUNTER'
+  }
+}
