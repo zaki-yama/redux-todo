@@ -17,3 +17,12 @@ export const getVisibleTodos = createSelector(
     }
   }
 )
+
+const counter = (state) => state.counter;
+export const getCounter = createSelector(
+  [ counter ],
+  (counter) => {
+    console.warn('count');
+    return counter;
+  }
+)

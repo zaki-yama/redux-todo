@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { incrementCounter } from '../actions/index';
+import { getCounter } from '../selectors/index';
 
 class Counter extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class Counter extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    counter: state.counter
+    counter: getCounter(state)
   };
 };
 
