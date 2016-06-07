@@ -21,6 +21,7 @@ const todo = (state, action) => {
 };
 
 const todos = (state = [], action) => {
+  console.log('todos');
   switch (action.type) {
     case 'ADD_TODO':
       return [
