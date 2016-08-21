@@ -1,6 +1,17 @@
 Redux Todo App
 --------------
 
+### Usage
+
+```
+$ npm install
+$ npm start
+```
+
+Then Access to http://localhost:3000/
+
+### Memo
+
 http://redux.js.org/docs/basics/index.html
 
 - Actions
@@ -8,7 +19,7 @@ http://redux.js.org/docs/basics/index.html
 - Reducers
 - Store
 
-### Actions
+##### Actions
 
 plain な JavaScript オブジェクト。`store.dispatch()` によって Store に送られる。
 
@@ -23,7 +34,7 @@ const ADD_TODO = 'ADD_TODO';
 }
 ```
 
-### Action Creators
+##### Action Creators
 
 Action を生成する function。シンプルに Action を返す。
 
@@ -36,7 +47,7 @@ export function addTodo(text) {
 }
 ```
 
-### Reducers
+##### Reducers
 
 Action によって state がどう変化するかを定義する。
 現在の state と Action を受け取り、新しい state を返す関数。
@@ -58,7 +69,7 @@ function todoApp(state, action) {
 state 内の各項目に依存関係がないとき、reducer を項目ごとに分割することができる。
 これを **reducer composition** と呼ぶ。
 
-### データフロー
+##### データフロー
 
 1. `createStore(reducer)` で `store` を生成する
 2. `store.dispatch(action)` を呼ぶ (実際には `action` は Action Creator の戻り値)
